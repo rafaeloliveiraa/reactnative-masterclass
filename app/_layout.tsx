@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-    <Drawer screenOptions={{ headerShown: true }}>
+    <Drawer screenOptions={{ headerShown: false }}>
       {/*TelaInicial*/}
       <Drawer.Screen
         name="index" 
@@ -33,6 +33,17 @@ export default function RootLayout() {
           drawerIcon: () => <Ionicons name="add" size={18} color="#3A98FF" />
         }}
       />
+
+      {/*TelaContador*/}
+      <Drawer.Screen
+        name="tabs" 
+        options={{
+          drawerLabel: 'tabs',
+          title: 'tabs',
+          drawerIcon: () => <Ionicons name="albums-outline" size={18} color="#3A98FF" />
+        }}
+      />
+
     </Drawer>
   </GestureHandlerRootView>
   );
